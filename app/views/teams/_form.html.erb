@@ -1,0 +1,17 @@
+<%= form_for @team do |f| %>
+  
+  <p>
+    <%= f.label :teamname %>
+    <%= f.text_field :teamname %>
+  </p>
+  
+  <p>
+    <%= f.label :teamalias %>
+    <%= f.text_field :teamalias %>
+  </p>
+  
+  <div class="actions">
+  <%= f.submit %>
+  </div>
+  
+  <% end %>

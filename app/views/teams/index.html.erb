@@ -1,0 +1,21 @@
+<h1>NFL Teams</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+  <% @teams.order('teamname').each do |team| %>
+  <tr>
+    <td><%= team.teamname %></td> 
+    <td><%= link_to 'Edit', edit_team_path(team) %></td>
+    <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <% end %>
+  </tr>
+  
+  </table>
+  
+  <p>
+  <%= link_to 'New', new_team_path %>
+  </p>
+  <%= Team.count %>

@@ -1,0 +1,50 @@
+<%= form_for @game, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :superbowl, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :superbowl, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :winner, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :winner, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :winscore, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :winscore, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :opponent, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :opponent, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :oppscore, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :oppscore, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :gamedate, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :gamedate, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :winconf, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :winconf, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                games_path, :class => 'btn' %>
+  </div>
+<% end %>
